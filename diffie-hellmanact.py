@@ -94,4 +94,4 @@ print("\n", "h3:", h3)
 if(h2 == h3):
     print("TRUE", "\n")
 else:
-    print("FALSE",  "\n")
+    print("FALSE.",  "\n")
