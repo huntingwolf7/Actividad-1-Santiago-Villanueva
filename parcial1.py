@@ -90,7 +90,7 @@ for i in range(len(chunks)):
    # Bob descifra el mensaje con su llave privada
     mD = pow(mC, dB, nA)
     m1 = int.to_bytes(mD, length=1024, byteorder='big').decode('utf-8')
-    mdc = ''.join(mD, length=1024, byteorder='big')
+    mdc = ''.join(m1, length=1024, byteorder='big')
     print("\n", "Mensaje Descifrado de Alice: ", mdc)
 
 
