@@ -71,7 +71,6 @@ print("\n", "Llave Privada de AC dAC", dAC)
 
 
 mensaje = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra nec diam cursus lacinia. Proin ut mi et lorem maximus cursus. Aliquam erat volutpat. Integer tristique, dolor eu hendrerit posuere, quam risus porttitor ante, ac scelerisque quam erat vitae ante. Integer ac nulla vel mauris feugiat rutrum nec vitae turpis. Proin eget risus ac nibh dignissim commodo. Vivamus porta magna at consectetur vehicula. Fusce in massa lacus. Morbi ultrices lacus vel enim fermentum, et fermentum metus blandit. Vestibulum sit amet finibus orci. Aliquam sodales arcu id nunc dignissim ullamcorper. Integer sit amet nisl in ligula convallis suscipit ut vel quam. Aenean varius mattis turpis a pellentesque. Ut id pulvinar risus, nec fringilla leo. Suspendisse sed condimentum arcu. Sed mattis lectus et metus pellentesque euismod. Donec sit amet pulvinar diam. In hac habitasse platea dictumst. Suspendisse potenti. Nulla luctus lacinia odio a feugiat. Curabitur tempor, magna ac iaculis efficitur, justo libero ultrices nisi, eget eleifend ante blandit."
-mensaje = "carta de alicia para bob"
 chunk_size = 128
 def split_into_chunks(mensaje, chunk_size):
     for i in range(0, len(mensaje), chunk_size):
@@ -91,10 +90,8 @@ for i in range(len(chunks)):
    # Bob descifra el mensaje con su llave privada
     mD = pow(mC, dB, nA)
     m1 = int.to_bytes(mD, length=1024, byteorder='big').decode('utf-8')
-    print("\n", "Mensaje Descifrado de Alice: ", m1)
-
-
-    #concatenar
+    mdc = ''.join(mD, length=1024, byteorder='big')
+    print("\n", "Mensaje Descifrado de Alice: ", mdc)
 
 
 
